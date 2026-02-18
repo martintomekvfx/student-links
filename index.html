@@ -1,475 +1,539 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Martin Tomek — Student Resources</title>
-  <meta name="description" content="Links and resources for students of Martin Tomek VFX." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martin Tomek — Student Resources</title>
+    <meta name="description" content="Links and resources for students of Martin Tomek VFX." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    :root {
-      --bg: #0a0a0f;
-      --surface: #12121a;
-      --surface2: #1a1a26;
-      --border: rgba(255,255,255,0.08);
-      --accent: #7c6fff;
-      --accent2: #ff6fb0;
-      --text: #e8e8f0;
-      --muted: #7a7a9a;
-      --success: #4ade80;
-      --radius: 16px;
-    }
+        :root {
+            --bg: #0a0a0f;
+            --surface: #12121a;
+            --surface2: #1a1a26;
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: #7c6fff;
+            --accent2: #ff6fb0;
+            --text: #e8e8f0;
+            --muted: #7a7a9a;
+            --success: #4ade80;
+            --radius: 16px;
+        }
 
-    html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    /* Animated background */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 20% 10%, rgba(124,111,255,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 80% 80%, rgba(255,111,176,0.08) 0%, transparent 60%);
-      pointer-events: none;
-      z-index: 0;
-    }
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 10%, rgba(124, 111, 255, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 80% 80%, rgba(255, 111, 176, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
 
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 60px 24px 80px;
-    }
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
 
-    /* Header */
-    .header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
 
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      margin: 0 auto 20px;
-      box-shadow: 0 0 40px rgba(124,111,255,0.3);
-      animation: pulse-glow 3s ease-in-out infinite;
-    }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 40px rgba(124, 111, 255, 0.3);
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
 
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 40px rgba(124,111,255,0.3); }
-      50% { box-shadow: 0 0 60px rgba(124,111,255,0.5), 0 0 80px rgba(255,111,176,0.2); }
-    }
+        @keyframes pulse-glow {
 
-    .header h1 {
-      font-size: clamp(28px, 5vw, 42px);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      background: linear-gradient(135deg, #fff 30%, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 10px;
-    }
+            0%,
+            100% {
+                box-shadow: 0 0 40px rgba(124, 111, 255, 0.3);
+            }
 
-    .header p {
-      color: var(--muted);
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.6;
-    }
+            50% {
+                box-shadow: 0 0 60px rgba(124, 111, 255, 0.5), 0 0 80px rgba(255, 111, 176, 0.2);
+            }
+        }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(124,111,255,0.15);
-      border: 1px solid rgba(124,111,255,0.3);
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 5px 12px;
-      border-radius: 100px;
-      margin-bottom: 16px;
-    }
+        .header h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #fff 30%, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
 
-    /* Section */
-    .section {
-      margin-bottom: 40px;
-    }
+        .header p {
+            color: var(--muted);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
 
-    .section-title {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 16px;
-      padding-left: 4px;
-    }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(124, 111, 255, 0.15);
+            border: 1px solid rgba(124, 111, 255, 0.3);
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
 
-    /* Link card */
-    .link-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
+        /* Section */
+        .section {
+            margin-bottom: 40px;
+        }
 
-    .link-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(124,111,255,0.04), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
+        .section-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 16px;
+            padding-left: 4px;
+        }
 
-    .link-card:hover {
-      border-color: rgba(124,111,255,0.3);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    }
+        /* Link card */
+        .link-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .link-card:hover::before { opacity: 1; }
+        .link-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(124, 111, 255, 0.04), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
-    .link-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
+        .link-card:hover {
+            border-color: rgba(124, 111, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
 
-    .link-icon.purple { background: rgba(124,111,255,0.15); }
-    .link-icon.pink   { background: rgba(255,111,176,0.15); }
-    .link-icon.blue   { background: rgba(111,176,255,0.15); }
-    .link-icon.green  { background: rgba(74,222,128,0.15); }
+        .link-card:hover::before {
+            opacity: 1;
+        }
 
-    .link-info {
-      flex: 1;
-      min-width: 0;
-    }
+        .link-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
 
-    .link-label {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
+        .link-icon.purple {
+            background: rgba(124, 111, 255, 0.15);
+        }
 
-    .link-url {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--muted);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+        .link-icon.pink {
+            background: rgba(255, 111, 176, 0.15);
+        }
 
-    .link-actions {
-      display: flex;
-      gap: 8px;
-      flex-shrink: 0;
-    }
+        .link-icon.blue {
+            background: rgba(111, 176, 255, 0.15);
+        }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 14px;
-      border-radius: 10px;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-      border: none;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+        .link-icon.green {
+            background: rgba(74, 222, 128, 0.15);
+        }
 
-    .btn-copy {
-      background: rgba(124,111,255,0.15);
-      color: var(--accent);
-      border: 1px solid rgba(124,111,255,0.25);
-    }
+        .link-info {
+            flex: 1;
+            min-width: 0;
+        }
 
-    .btn-copy:hover {
-      background: rgba(124,111,255,0.25);
-      border-color: rgba(124,111,255,0.5);
-    }
+        .link-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
 
-    .btn-copy.copied {
-      background: rgba(74,222,128,0.15);
-      color: var(--success);
-      border-color: rgba(74,222,128,0.3);
-    }
+        .link-url {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
-    .btn-open {
-      background: rgba(255,255,255,0.06);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
+        .link-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
 
-    .btn-open:hover {
-      background: rgba(255,255,255,0.1);
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            text-decoration: none;
+            white-space: nowrap;
+        }
 
-    /* Copy all section */
-    .copy-all-card {
-      background: linear-gradient(135deg, rgba(124,111,255,0.12), rgba(255,111,176,0.08));
-      border: 1px solid rgba(124,111,255,0.25);
-      border-radius: var(--radius);
-      padding: 24px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
+        .btn-copy {
+            background: rgba(124, 111, 255, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(124, 111, 255, 0.25);
+        }
 
-    .copy-all-card h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+        .btn-copy:hover {
+            background: rgba(124, 111, 255, 0.25);
+            border-color: rgba(124, 111, 255, 0.5);
+        }
 
-    .copy-all-card p {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
+        .btn-copy.copied {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--success);
+            border-color: rgba(74, 222, 128, 0.3);
+        }
 
-    .btn-copy-all {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-      border: none;
-      padding: 12px 28px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
+        .btn-open {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
 
-    .btn-copy-all:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(124,111,255,0.4);
-    }
+        .btn-open:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-    .btn-copy-all.copied {
-      background: linear-gradient(135deg, var(--success), #22c55e);
-    }
+        /* Copy all section */
+        .copy-all-card {
+            background: linear-gradient(135deg, rgba(124, 111, 255, 0.12), rgba(255, 111, 176, 0.08));
+            border: 1px solid rgba(124, 111, 255, 0.25);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-    /* Text block for copy all */
-    .text-block {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 20px;
-      margin-top: 16px;
-      text-align: left;
-    }
+        .copy-all-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
 
-    .text-block pre {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.8;
-      white-space: pre-wrap;
-      word-break: break-all;
-    }
+        .copy-all-card p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
 
-    /* Footer */
-    .footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
+        .btn-copy-all {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-    .footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+        .btn-copy-all:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(124, 111, 255, 0.4);
+        }
 
-    /* Toast */
-    .toast {
-      position: fixed;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%) translateY(80px);
-      background: var(--surface2);
-      border: 1px solid rgba(74,222,128,0.3);
-      color: var(--success);
-      padding: 12px 24px;
-      border-radius: 100px;
-      font-size: 14px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
-      z-index: 100;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    }
+        .btn-copy-all.copied {
+            background: linear-gradient(135deg, var(--success), #22c55e);
+        }
 
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
-    }
+        /* Text block for copy all */
+        .text-block {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 16px;
+            text-align: left;
+        }
 
-    @media (max-width: 560px) {
-      .link-card { flex-wrap: wrap; }
-      .link-actions { width: 100%; }
-      .btn { flex: 1; justify-content: center; }
-    }
-  </style>
+        .text-block pre {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: var(--surface2);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            color: var(--success);
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 100;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        @media (max-width: 560px) {
+            .link-card {
+                flex-wrap: wrap;
+            }
+
+            .link-actions {
+                width: 100%;
+            }
+
+            .btn {
+                flex: 1;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-  <!-- Header -->
-  <div class="header">
-    <div class="avatar">🎬</div>
-    <div class="badge">✦ Student Resources</div>
-    <h1>Martin Tomek VFX</h1>
-    <p>All the links you need for the course.<br>Click to copy or open directly.</p>
-  </div>
+        <!-- Header -->
+        <div class="header">
+            <div class="avatar">🎬</div>
+            <div class="badge">✦ Student Resources</div>
+            <h1>Martin Tomek VFX</h1>
+            <p>All the links you need for the course.<br>Click to copy or open directly.</p>
+        </div>
 
-  <!-- Copy All -->
-  <div class="copy-all-card">
-    <h3>📋 Copy Everything at Once</h3>
-    <p>Get all links in one click — paste them wherever you need.</p>
-    <button class="btn-copy-all" id="copyAllBtn" onclick="copyAll()">
-      <span>⎘</span> Copy All Links
-    </button>
-    <div class="text-block">
-      <pre id="allLinksText">Portfolio:     https://martintomekvfx.github.io
+        <!-- Copy All -->
+        <div class="copy-all-card">
+            <h3>📋 Copy Everything at Once</h3>
+            <p>Get all links in one click — paste them wherever you need.</p>
+            <button class="btn-copy-all" id="copyAllBtn" onclick="copyAll()">
+                <span>⎘</span> Copy All Links
+            </button>
+            <div class="text-block">
+                <pre id="allLinksText">Portfolio:     https://martintomekvfx.github.io
 GitHub Starter: https://github.com/martintomekvfx/portfolio-starter/
-AI Presentation: https://martintomekvfx.github.io/prezentaceAI/</pre>
+AI Presentation: https://martintomekvfx.github.io/prezentaceAI/
+Inspiration:   https://github.com/gsbm/web-avant-gardes</pre>
+            </div>
+        </div>
+
+        <!-- Main Links -->
+        <div class="section">
+            <div class="section-title">🔗 Course Links</div>
+
+            <div class="link-card">
+                <div class="link-icon purple">🌐</div>
+                <div class="link-info">
+                    <div class="link-label">Portfolio Website</div>
+                    <div class="link-url">https://martintomekvfx.github.io</div>
+                </div>
+                <div class="link-actions">
+                    <button class="btn btn-copy" onclick="copyLink(this, 'https://martintomekvfx.github.io')">⎘
+                        Copy</button>
+                    <a class="btn btn-open" href="https://martintomekvfx.github.io" target="_blank" rel="noopener">↗
+                        Open</a>
+                </div>
+            </div>
+
+            <div class="link-card">
+                <div class="link-icon green">📦</div>
+                <div class="link-info">
+                    <div class="link-label">Portfolio Starter (GitHub)</div>
+                    <div class="link-url">https://github.com/martintomekvfx/portfolio-starter/</div>
+                </div>
+                <div class="link-actions">
+                    <button class="btn btn-copy"
+                        onclick="copyLink(this, 'https://github.com/martintomekvfx/portfolio-starter/')">⎘ Copy</button>
+                    <a class="btn btn-open" href="https://github.com/martintomekvfx/portfolio-starter/" target="_blank"
+                        rel="noopener">↗ Open</a>
+                </div>
+            </div>
+
+            <div class="link-card">
+                <div class="link-icon blue">✨</div>
+                <div class="link-info">
+                    <div class="link-label">Portfolio Inspiration (Avant-garde)</div>
+                    <div class="link-url">https://github.com/gsbm/web-avant-gardes</div>
+                </div>
+                <div class="link-actions">
+                    <button class="btn btn-copy" onclick="copyLink(this, 'https://github.com/gsbm/web-avant-gardes')">⎘
+                        Copy</button>
+                    <a class="btn btn-open" href="https://github.com/gsbm/web-avant-gardes" target="_blank"
+                        rel="noopener">↗ Open</a>
+                </div>
+            </div>
+
+            <div class="link-card">
+                <div class="link-icon pink">🤖</div>
+                <div class="link-info">
+                    <div class="link-label">AI Presentation</div>
+                    <div class="link-url">https://martintomekvfx.github.io/prezentaceAI/</div>
+                </div>
+                <div class="link-actions">
+                    <button class="btn btn-copy"
+                        onclick="copyLink(this, 'https://martintomekvfx.github.io/prezentaceAI/')">⎘ Copy</button>
+                    <a class="btn btn-open" href="https://martintomekvfx.github.io/prezentaceAI/" target="_blank"
+                        rel="noopener">↗ Open</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Made with ♥ for students &nbsp;·&nbsp; <a href="https://martintomekvfx.github.io"
+                    target="_blank">martintomekvfx.github.io</a></p>
+        </div>
+
     </div>
-  </div>
 
-  <!-- Main Links -->
-  <div class="section">
-    <div class="section-title">🔗 Course Links</div>
+    <!-- Toast notification -->
+    <div class="toast" id="toast">✓ Copied to clipboard!</div>
 
-    <div class="link-card">
-      <div class="link-icon purple">🌐</div>
-      <div class="link-info">
-        <div class="link-label">Portfolio Website</div>
-        <div class="link-url">https://martintomekvfx.github.io</div>
-      </div>
-      <div class="link-actions">
-        <button class="btn btn-copy" onclick="copyLink(this, 'https://martintomekvfx.github.io')">⎘ Copy</button>
-        <a class="btn btn-open" href="https://martintomekvfx.github.io" target="_blank" rel="noopener">↗ Open</a>
-      </div>
-    </div>
+    <script>
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = '✓ ' + msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2200);
+        }
 
-    <div class="link-card">
-      <div class="link-icon green">📦</div>
-      <div class="link-info">
-        <div class="link-label">Portfolio Starter (GitHub)</div>
-        <div class="link-url">https://github.com/martintomekvfx/portfolio-starter/</div>
-      </div>
-      <div class="link-actions">
-        <button class="btn btn-copy" onclick="copyLink(this, 'https://github.com/martintomekvfx/portfolio-starter/')">⎘ Copy</button>
-        <a class="btn btn-open" href="https://github.com/martintomekvfx/portfolio-starter/" target="_blank" rel="noopener">↗ Open</a>
-      </div>
-    </div>
+        function copyLink(btn, url) {
+            navigator.clipboard.writeText(url).then(() => {
+                const orig = btn.innerHTML;
+                btn.innerHTML = '✓ Copied!';
+                btn.classList.add('copied');
+                showToast('Link copied!');
+                setTimeout(() => {
+                    btn.innerHTML = orig;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
 
-    <div class="link-card">
-      <div class="link-icon pink">🤖</div>
-      <div class="link-info">
-        <div class="link-label">AI Presentation</div>
-        <div class="link-url">https://martintomekvfx.github.io/prezentaceAI/</div>
-      </div>
-      <div class="link-actions">
-        <button class="btn btn-copy" onclick="copyLink(this, 'https://martintomekvfx.github.io/prezentaceAI/')">⎘ Copy</button>
-        <a class="btn btn-open" href="https://martintomekvfx.github.io/prezentaceAI/" target="_blank" rel="noopener">↗ Open</a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <p>Made with ♥ for students &nbsp;·&nbsp; <a href="https://martintomekvfx.github.io" target="_blank">martintomekvfx.github.io</a></p>
-  </div>
-
-</div>
-
-<!-- Toast notification -->
-<div class="toast" id="toast">✓ Copied to clipboard!</div>
-
-<script>
-  function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = '✓ ' + msg;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2200);
-  }
-
-  function copyLink(btn, url) {
-    navigator.clipboard.writeText(url).then(() => {
-      const orig = btn.innerHTML;
-      btn.innerHTML = '✓ Copied!';
-      btn.classList.add('copied');
-      showToast('Link copied!');
-      setTimeout(() => {
-        btn.innerHTML = orig;
-        btn.classList.remove('copied');
-      }, 2000);
-    });
-  }
-
-  function copyAll() {
-    const text = document.getElementById('allLinksText').textContent;
-    navigator.clipboard.writeText(text).then(() => {
-      const btn = document.getElementById('copyAllBtn');
-      btn.innerHTML = '<span>✓</span> All Copied!';
-      btn.classList.add('copied');
-      showToast('All links copied!');
-      setTimeout(() => {
-        btn.innerHTML = '<span>⎘</span> Copy All Links';
-        btn.classList.remove('copied');
-      }, 2500);
-    });
-  }
-</script>
+        function copyAll() {
+            const text = document.getElementById('allLinksText').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyAllBtn');
+                btn.innerHTML = '<span>✓</span> All Copied!';
+                btn.classList.add('copied');
+                showToast('All links copied!');
+                setTimeout(() => {
+                    btn.innerHTML = '<span>⎘</span> Copy All Links';
+                    btn.classList.remove('copied');
+                }, 2500);
+            });
+        }
+    </script>
 
 </body>
+
 </html>
